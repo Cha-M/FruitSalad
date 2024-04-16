@@ -17,12 +17,12 @@ contract FruitSalad is ERC1155 {
     uint256 public constant GRAPE = 4;
     uint256 public constant FRUIT_SALAD = 5;
 
-    constructor() ERC1155("localhost:3000/whatever/{id}.json") {
+    constructor() ERC1155("https://github.com/Cha-M/FruitSaladFrontend/tree/main/src/app/token/{id}.json") {
         Owner = payable(msg.sender);
         _mint(msg.sender, MANGO, 1, "");
         _mint(msg.sender, ORANGE, 2, "");
-        _mint(msg.sender, BANANA, 2, "");
-        _mint(msg.sender, PEACH, 2, "");
+        _mint(msg.sender, BANANA, 1, "");
+        _mint(msg.sender, PEACH, 1, "");
         _mint(msg.sender, GRAPE, 10, "");
     }
 
